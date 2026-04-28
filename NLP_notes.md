@@ -455,6 +455,13 @@ print(vec.vocabulary_)
 TF = Term Frequency
 IDF = Inverse Document Frequency
 
+## 1. Term Frequency (TF):
+   Measures how often a word appears in a document. A higher frequency suggests greater importance. If a term appears frequently in a document, it is likely relevant to the document’s content.
+<img width="800" height="128" alt="image" src="https://github.com/user-attachments/assets/b4bc7581-a502-4aae-8a58-d90956b604ee" />
+
+## 2. Inverse Document Frequency (IDF):
+   This measures how unique or rare a term is across a collection of documents (corpus). Words that appear in many documents are less informative, so IDF reduces their weight, while rare words are given higher importance
+   
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
 
