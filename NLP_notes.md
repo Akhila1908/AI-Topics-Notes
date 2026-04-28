@@ -456,7 +456,7 @@ TF = Term Frequency
 IDF = Inverse Document Frequency
 
 ## 1. Term Frequency (TF):
-   Measures how often a word appears in a document. A higher frequency suggests greater importance. If a term appears frequently in a document, it is likely relevant to the document’s content.
+   Measures how often a word appears in a document. A higher frequency suggests greater importance. If a term appears frequently in a document, it is likely relevant to the document’s content. (document means sentence , term means word)
 <img width="800" height="128" alt="image" src="https://github.com/user-attachments/assets/b4bc7581-a502-4aae-8a58-d90956b604ee" />
 
 ## 2. Inverse Document Frequency (IDF):
@@ -488,6 +488,8 @@ Still does not capture semantics.
 
 Convert words into dense vectors.
 
+Word embeddings are a way to represent words as dense vectors in a multi-dimensional space, where the distance and direction between vectors reflect the similarity and relationships among words.
+
 Properties:
 
 * Similar words have similar vectors
@@ -500,9 +502,12 @@ Example:
 * king near queen
 
 ---
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/51c721a4-a88e-45d6-9fbc-e1bfa4c8b756" />
 
-# Word2Vec
-
+## Popular Techniques
+## 1. Word2Vec
+    Uses neural networks to predict surrounding words of a target word. It has two architectures: Continuous Bag of Words (CBOW), which predicts a word from its context, and Skip-gram, which predicts context words from a target word
+    
 ```python
 import gensim.downloader as api
 
@@ -519,9 +524,7 @@ king - man + woman = queen
 
 ---
 
-# Other Embeddings
-
-## GloVe
+## 2.GloVe
 
 Global Vectors
 
@@ -628,6 +631,7 @@ Example:
 **Bidirectional Encoder Representations from Transformers**
 
 Reads context in both directions.
+      It is a transformer-based model designed to understand the context of text using a bidirectional approach. It focuses on capturing relationships between words rather than generating text.
 
 ```python
 from transformers import pipeline
