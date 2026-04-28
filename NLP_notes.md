@@ -158,7 +158,7 @@ Examples:
 
 ## Definition
 
-Regex identifies patterns inside text.
+Regex identifies patterns inside text.Regex is a rule-based method used to identify patterns inside text, such as phone numbers, email addresses, dates, URLs, or unwanted symbols. It is mainly used in NLP for cleaning and preprocessing raw text before applying models.
 
 Examples:
 
@@ -199,7 +199,7 @@ Output:
 
 ## Definition
 
-Tokenization splits text into smaller pieces called tokens.
+Tokenization is the process of breaking text into smaller units called tokens, such as words or sentences. It is the first major preprocessing step because computers need text split into manageable pieces before analysis.
 
 Example:
 
@@ -243,6 +243,7 @@ Models work on tokens, not raw paragraphs.
 # Stopwords
 
 ## Definition
+Stopwords are very common words like “the,” “is,” and “and” that often do not add much meaning. Removing them reduces noise and helps models focus on informative words.
 
 Common words often removed:
 
@@ -278,6 +279,7 @@ Output:
 # Stemming vs Lemmatization
 
 ## Stemming
+Stemming reduces words to their root form using simple rules by cutting off endings. For example, “playing” becomes “play.” It is fast, but sometimes produces incomplete roots.
 
 Cuts word endings.
 
@@ -297,7 +299,7 @@ print(stemmer.stem('running'))
 
 ## Lemmatization
 
-Dictionary root.
+Lemmatization converts words into their correct dictionary root using grammar and vocabulary. For example, “studies” becomes “study.” It is more accurate than stemming.
 
 Examples:
 
@@ -325,6 +327,8 @@ for token in doc:
 
 Part Of Speech Tagging
 
+Part-of-Speech tagging assigns grammatical roles such as noun, verb, or adjective to each word. It helps understand sentence structure and is useful in parsing and information extraction.
+
 Assigns:
 
 * Noun
@@ -349,6 +353,7 @@ fast ADV
 ---
 
 # Named Entity Recognition (NER)
+Named Entity Recognition identifies important entities in text, such as people, locations, dates, and organizations.
 
 ## Finds entities like:
 
